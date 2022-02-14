@@ -1,8 +1,14 @@
+import navStyles from '../styles/Nav.module.scss';
+import HamburgerMenu from '../assets/hamburger.svg';
+
 function Nav() {
   return (
-    <div>
-      <h1>Nav</h1>
-    </div>
+    <nav className={navStyles.nav}>
+      <button>
+        <HamburgerMenu />
+      </button>
+      <div>니콘내콘</div>
+    </nav>
   );
 }
 
