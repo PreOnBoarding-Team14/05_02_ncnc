@@ -6,7 +6,7 @@ export default function Home() {
     <div>
       <Layout>
         <head>
-          <title>Hellow Next JS</title>
+          <title>니콘내콘</title>
         </head>
       </Layout>
     </div>
