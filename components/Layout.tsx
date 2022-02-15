@@ -1,16 +1,14 @@
 import { FC, useCallback } from 'react';
-import Nav from './Nav';
 import Head from 'next/head';
-
+import NavBar from 'components/Navbar';
 const Layout: FC = ({ children }) => {
   return (
-    <div className="container">
+    <>
       <Head>
         <title>니콘내콘</title>
       </Head>
-      {/* <Nav /> */}
-      {children}
-    </div>
+      <div className="container">{children}</div>
+    </>
   );
 };
 
