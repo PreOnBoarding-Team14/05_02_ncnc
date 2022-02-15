@@ -1,0 +1,54 @@
+.qasItem {
+  border-bottom: 2px solid #ebeced;
+  button {
+    box-shadow: none !important;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    color: #333;
+    padding: 0;
+  }
+  .qasBtn {
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 17px;
+    width: 100%;
+    cursor: pointer;
+
+    .spanQ {
+      margin-right: 10px;
+      color: rgb(255, 87, 87);
+    }
+    .spanQuestion {
+      flex-grow: 1;
+      text-align: left;
+    }
+    .spanArrow {
+      svg:not(:root) {
+        overflow: hidden;
+      }
+
+      svg {
+        width: 16px;
+        height: 9px;
+        fill: none;
+      }
+    }
+  }
+
+  .answerBox {
+    background-color: rgb(235, 236, 237);
+    padding: 17px;
+    display: none;
+
+    .answer {
+      font-size: 16px;
+      transition: all 1.5s ease 0s;
+      line-height: 1.3;
+      &.open {
+        display: block;
+      }
+    }
+  }
+}

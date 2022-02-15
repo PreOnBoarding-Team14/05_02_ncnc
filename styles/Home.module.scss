@@ -1,5 +1,13 @@
 .container {
-  padding: 0 2rem;
+  width: 100%;
+  left: 0;
+  right: 0;
+  max-width: 672px;
+  position: absolute;
+  background-color: #fff;
+  display: block;
+  margin: 0 auto;
+  top: 0;
 }
 
 .main {
