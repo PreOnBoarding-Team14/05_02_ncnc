@@ -1,14 +1,19 @@
-// items/[id].tsx
-// 브랜드 상품 리스트에 있는 상품 클릭 시 보여주는 상품 정보 화면
-
 import axios from 'axios';
 import ItemList from 'components/ItemList';
+import Warning from 'components/Warning';
+import NavBar from 'components/Navbar';
+import EmptyBox from 'components/EmptyBox';
+import itemStyles from '../../styles/Item.module.scss';
 
 export default function BrandList({ data }) {
-  const text = data[0].warning;
+  const itemNavbarAttr = { name: '', path: '/' };
+
   return (
-    <div>
+    <div className={itemStyles.div}>
+      <NavBar attr={itemNavbarAttr} />
+      <EmptyBox />
       <ItemList data={data} />
+      <Warning />
     </div>
   );
 }
