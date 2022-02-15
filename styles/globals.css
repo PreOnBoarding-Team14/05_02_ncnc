@@ -7,6 +7,8 @@ body {
   display: flex;
   background-color: #dddddd;
   justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 a {
@@ -17,4 +19,11 @@ a {
 * {
   box-sizing: border-box;
   font-family: 'Apple SD Gothic Neo';
+}
+
+.background {
+  height: 100%;
+  width: 375px;
+  background-color: #e5e5e5;
+  overflow: hidden;
 }

@@ -1,0 +1,28 @@
+@import './common.scss';
+
+.container {
+  width: $mobile-width;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  height: 100%;
+}
+
+.title {
+  display: flex;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  color: #808080;
+  font-size: 12px;
+  margin: 5px;
+
+  div {
+    margin: 5px;
+  }
+}
