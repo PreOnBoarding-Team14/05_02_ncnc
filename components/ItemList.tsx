@@ -4,8 +4,12 @@ import Image from 'next/image';
 import itemListStyles from '../styles/ItemList.module.scss';
 
 const ItemList = ({ data }) => {
+  const router = useRouter();
+  const isItem = router.pathname.includes('item');
+  console.log(data);
+
   return (
-    <div className={itemListStyles.div}>
+    <div className={isItem ? itemListStyles.item : itemListStyles.div}>
       {data.map((e) => (
         <Link href={`/items/${e.id}`} key={e.id}>
           <a>
@@ -18,6 +22,11 @@ const ItemList = ({ data }) => {
                   height="74px"
                 />
                 <div>
+                  {isItem && e.conCategory2 ? (
+                    <div className={itemListStyles.brand}>
+                      {e.conCategory2.name}
+                    </div>
+                  ) : null}
                   <div>{e.name}</div>
                   <div>
                     <span>
