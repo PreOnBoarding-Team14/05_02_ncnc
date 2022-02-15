@@ -5,11 +5,13 @@ import Grid from 'components/Grid';
 import MainText from 'components/MainText';
 import ItemList from 'components/ItemList';
 import IndexStyles from '../styles/Index.module.scss';
+import EmptyBox from 'components/EmptyBox';
 
 export default function Home({ conCategories, conItems }) {
   return (
     <div className={IndexStyles.container}>
       <NavBar />
+      <EmptyBox />
       <Grid data={conCategories} />
       <MainText />
       <ItemList data={conItems} />
