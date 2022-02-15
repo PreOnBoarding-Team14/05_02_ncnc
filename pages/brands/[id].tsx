@@ -1,15 +1,18 @@
 import axios from 'axios';
-import { useRouter } from 'next/router';
+import NavBar from 'components/Navbar';
 import ItemList from 'components/ItemList';
+import EmptyBox from 'components/EmptyBox';
 
-// brands/[id]
-// 상품리스트
+export default function ProductList({ data, current, name }) {
+  const brandsNavbarAttr = { name, path: `/categories/${current}` };
 
-export default function ProductList({ data }) {
-  const router = useRouter();
-  const { id, current } = router.query;
-
-  return <ItemList data={data} />;
+  return (
+    <div>
+      <NavBar attr={brandsNavbarAttr} />
+      <EmptyBox />
+      <ItemList data={data} />
+    </div>
+  );
 }
 
 export const getServerSideProps = async ({ query }) => {
@@ -30,11 +33,13 @@ export const getServerSideProps = async ({ query }) => {
   );
   const { conCategory2s } = res.data.conCategory1;
   const brand = conCategory2s.find((e) => e.id === +id);
-  const { conItems } = brand;
+  const { conItems, name } = brand;
 
   return {
     props: {
       data: conItems,
+      current,
+      name,
     },
   };
 };
