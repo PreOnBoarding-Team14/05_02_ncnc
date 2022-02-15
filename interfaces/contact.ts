@@ -19,6 +19,6 @@ export interface ContactListProps {
 }
 
 export interface ContactsListResponseProps {
-  buyQas: Array<ContactListProps>;
-  sellQas: Array<ContactListProps>;
+  buyQas: Array<ContactsProps>;
+  sellQas: Array<ContactsProps>;
 }
