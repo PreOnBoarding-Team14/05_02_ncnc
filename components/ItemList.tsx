@@ -1,11 +1,9 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import Image from 'next/image';
 import itemListStyles from '../styles/ItemList.module.scss';
 
 const ItemList = ({ data }) => {
-  const router = useRouter();
-  console.log(data);
-
   return (
     <div className={itemListStyles.div}>
       {data.map((e) => (
@@ -13,7 +11,12 @@ const ItemList = ({ data }) => {
           <a>
             <div>
               <div>
-                <img src={e.imageUrl} />
+                <Image
+                  className={itemListStyles.img}
+                  src={e.imageUrl}
+                  width="74px"
+                  height="74px"
+                />
                 <div>
                   <div>{e.name}</div>
                   <div>
