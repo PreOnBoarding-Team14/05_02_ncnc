@@ -9,3 +9,16 @@ export interface ContactsProps {
   question: string;
   answer: string;
 }
+
+export interface ContactResponseProps {
+  qaTypes: Array<ContactTypeProps>;
+}
+
+export interface ContactListProps {
+  qas: Array<ContactsProps>;
+}
+
+export interface ContactsListResponseProps {
+  buyQas: Array<ContactListProps>;
+  sellQas: Array<ContactListProps>;
+}
