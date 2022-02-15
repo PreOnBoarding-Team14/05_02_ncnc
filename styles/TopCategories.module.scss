@@ -1,0 +1,30 @@
+@import './common.scss';
+
+.div {
+  display: flex;
+  width: $mobile-width;
+  height: 40px;
+  margin-top: 50px;
+  background-color: white;
+  overflow: auto;
+  padding: 0 13px;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    width: max-content;
+    height: 40px;
+    padding: 0 15px;
+  }
+}
+
+.div::-webkit-scrollbar {
+  display: none;
+}
+
+.selected {
+  color: $pink;
+  border-bottom: 2px solid;
+}

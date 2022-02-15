@@ -1,0 +1,30 @@
+@import './common.scss';
+
+.nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: $mobile-width;
+  height: 50px;
+}
+
+.nav button {
+  display: flex;
+  background-color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav div {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-right: 50px;
+  background-color: white;
+}
