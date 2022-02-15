@@ -1,0 +1,19 @@
+@import './common.scss';
+
+.div {
+  display: flex;
+  width: $mobile-width;
+  height: 40px;
+  margin-top: 50px;
+  border-top: 1px solid $gray;
+  border-bottom: 10px solid $gray;
+  background-color: white;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin: 17px 12px;
+  }
+}

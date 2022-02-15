@@ -1,11 +1,9 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import Image from 'next/image';
 import itemListStyles from '../styles/ItemList.module.scss';
 
 const ItemList = ({ data }) => {
-  const router = useRouter();
-  const isCategory = router.pathname.includes('/categories');
-
   return (
     <div className={itemListStyles.div}>
       {data.map((e) => (
@@ -13,22 +11,26 @@ const ItemList = ({ data }) => {
           <a>
             <div>
               <div>
-                <img src={e.imageUrl} />
+                <Image
+                  className={itemListStyles.img}
+                  src={e.imageUrl}
+                  width="74px"
+                  height="74px"
+                />
                 <div>
                   <div>{e.name}</div>
                   <div>
                     <span>
-                      {isCategory
+                      {e.discountRate
                         ? e.discountRate
-                        : 100 -
-                          Number(
-                            (e.minSellingPrice / e.originalPrice).toFixed(2),
-                          ) *
-                            100}
+                        : (
+                            100 -
+                            (e.minSellingPrice / e.originalPrice) * 100
+                          ).toFixed(0)}
                       %
                     </span>
                     <span>
-                      {isCategory
+                      {e.ncSellingPrice
                         ? e.ncSellingPrice.toLocaleString()
                         : e.minSellingPrice.toLocaleString()}
                       원

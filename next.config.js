@@ -29,3 +29,9 @@ module.exports = {
     includePaths: [path.join(__dirname, 'styles')],
   },
 };
+
+module.exports = {
+  images: {
+    domains: ['d2lfdrnysfmya6.cloudfront.net'],
+  },
+};
