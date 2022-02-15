@@ -1,34 +1,116 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### 배포 주소
 
-## Getting Started
+## 💻 설치 방법
 
-First, run the development server:
+    npm install
+    npm run dev
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## 📂 파일 구조
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+┣ apis
+┃ ┣ contact.ts
+┃ ┗ main.ts
+┣ assets
+┃ ┣ Arrow.svg
+┃ ┣ back.svg
+┃ ┣ enter.svg
+┃ ┗ hamburger.svg
+┣ components
+┃ ┣ BrandItem.tsx
+┃ ┣ ContactsItem.tsx
+┃ ┣ EmptyBox.tsx
+┃ ┣ Grid.tsx
+┃ ┣ ItemList.tsx
+┃ ┣ Layout.tsx
+┃ ┣ MainText.tsx
+┃ ┣ Modal.tsx
+┃ ┣ Navbar.tsx
+┃ ┣ ProductItem.tsx
+┃ ┣ TopCategories.tsx
+┃ ┣ TopCount.tsx
+┃ ┗ Warning.tsx
+┣ config
+┃ ┗ config.ts
+┣ interfaces
+┃ ┗ contact.ts
+┣ pages
+┃ ┣ brands
+┃ ┃ ┗ [id].tsx
+┃ ┣ categories
+┃ ┃ ┗ [id].tsx
+┃ ┣ items
+┃ ┃ ┗ [id].tsx
+┃ ┣ contacts.tsx
+┃ ┣ index.tsx
+┃ ┗ \_app.tsx
+┣ public
+┃ ┣ favicon.ico
+┃ ┗ vercel.svg
+┗ styles
+┃ ┣ common.scss
+┃ ┣ ContactItem.module.scss
+┃ ┣ Contacts.module.scss
+┃ ┣ EmptyBox.module.scss
+┃ ┣ globals.css
+┃ ┣ Grid.module.scss
+┃ ┣ Home.module.scss
+┃ ┣ Index.module.scss
+┃ ┣ Item.module.scss
+┃ ┣ ItemList.module.scss
+┃ ┣ MainText.module.scss
+┃ ┣ Modal.module.scss
+┃ ┣ Nav.module.scss
+┃ ┣ TopCategories.module.scss
+┃ ┣ TopCount.module.scss
+┃ ┗ Warning.module.scss
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 📋개발 진행 상황 공유
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<img width="952" alt="스크린샷 2022-02-09 오전 2 42 19" src="https://user-images.githubusercontent.com/91244500/153044840-4b2231bb-2323-4086-aad8-377874414505.png">
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 프로젝트 과정 소개
 
-## Learn More
+| 슬랙을 이용한 소통                                                                                                             |                                                       게더를 활용한 소통                                                       |
+| :----------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: |
+| <img width="auto" src="https://user-images.githubusercontent.com/80146176/153052997-f2ca6637-40f8-4e7f-9609-f4885577706a.png"> | <img width="auto" src="https://user-images.githubusercontent.com/80146176/153053947-7be40938-62f8-4dd9-a54b-7328ea550546.png"> |
+| 노션에서의 소통                                                                                                                |                                                     화면공유를 활용한 소통                                                     |
+| <img width="auto" src="https://user-images.githubusercontent.com/80146176/153054588-6194940a-a76d-4fde-a164-2efb3989d6e8.png"> | <img width="auto" src="https://user-images.githubusercontent.com/80146176/153054110-d7c4169e-3824-4903-8ca5-fc4aec044055.png"> |
 
-To learn more about Next.js, take a look at the following resources:
+## 📝 기능
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Next.js와 Typescript 사용
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 니콘내콘 모바일 웹 페이지와 같은 라우팅
 
-## Deploy on Vercel
+재사용 가능한 Container
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Header
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+카테고리, 브랜드 페이지에서 선택한 메뉴를 중앙에 출력
+
+### 홈
+
+- getServerSideProps 사용해 비동기로 API 요청
+- 브랜드 메뉴 리스트 출력
+- 땡처리 리스트 출력
+
+### 카테고리
+
+- 카테고리 내에서 브랜드 리스트 출력
+- 각 카테고리 페이지 생성
+- 브랜드 클릭 or 터치 시 해당 브랜드 상세로 이동
+- 상품 리스트 출력 (/brands)
+
+### 상품리스트
+
+- 상품 리스트 출력
+- 상품 개수 좌측 상단에 출력
+- 이미지, 상품명, 할인율, 할인가, 정가
+- 상품 상세 정보 출력 (/items)
+
+### 고객 센터
+
+- 홈 화면의 좌측 상단 햄버거 메뉴 눌렀을 때 고객 센터 페이지로 이동하는 메뉴 노출
+- 상담 시간 안내
+- 구매 / 판매 탭 버튼 구현
+- 구매 / 판매 각각의 QnA 리스트 조회
