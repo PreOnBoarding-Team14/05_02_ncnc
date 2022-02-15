@@ -1,37 +1,43 @@
-import { useEffect, useState } from 'react';
-import { GetStaticProps } from 'next';
-import { useRouter } from 'next/router';
-import Layout from 'components/Layout';
 import { getContactsType, getContactsQas } from 'apis/contact';
-import { ContactsProps, ContactTypeProps } from 'interfaces/contact';
-// 고객 센터 페이지
+import { ContactResponseProps, ContactsListResponseProps } from 'interfaces/contact';
+import contactsStyle from 'styles/Contacts.module.scss';
 
-export default function Contacts(
-  types: Array<ContactTypeProps>,
-  contacts: Array<ContactsProps>,
-) {
-  // const [contactsType, setContactsType] = useState<Array<ContactTypeProps>>([]);
-  // const [contactsList, setContactsList] = useState<Array<ContactsProps>>([]);
-  // const router = useRouter();
-  // const { qaTypeId } = router.query;
+interface ContactsTypeQasProps {
+  qaTypes: ContactResponseProps;
+  qasList: ContactsListResponseProps;
+}
 
-  console.log(types);
+export default function Contacts({ qaTypes, qasList }: ContactsTypeQasProps) {
+	const typeList = qaTypes;
+	const buyQasList = qasList.buyQas;
+	const sellQasList = qasList.sellQas;
 
   return (
-    <Layout>
-      <div>
-        <div></div>
-      </div>
-    </Layout>
-  );
+		<div className={contactStyle.body}>
+			<
+		</div>
+	);
 }
 
 export const getStaticProps = async () => {
-  const contactsTypeRes = await getContactsType();
-  console.log(contactsTypeRes);
+  const typeRes = await getContactsType();
+  const { qaTypes } = typeRes;
+
+  const buyResponse = await getContactsQas(1);
+  const sellReponse = await getContactsQas(2);
+
+  const getQas = (res) => {
+    const { qas } = res;
+    return qas;
+  };
+
   return {
     props: {
-      contactsTypeRes,
+      qaTypes,
+      qasList: {
+        buyQas: getQas(buyResponse),
+        sellQas: getQas(sellReponse),
+      },
     },
   };
 };
