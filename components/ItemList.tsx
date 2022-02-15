@@ -4,7 +4,7 @@ import itemListStyles from '../styles/ItemList.module.scss';
 
 const ItemList = ({ data }) => {
   const router = useRouter();
-  const isCategory = router.pathname.includes('/categories');
+  console.log(data);
 
   return (
     <div className={itemListStyles.div}>
@@ -18,17 +18,16 @@ const ItemList = ({ data }) => {
                   <div>{e.name}</div>
                   <div>
                     <span>
-                      {isCategory
+                      {e.discountRate
                         ? e.discountRate
-                        : 100 -
-                          Number(
-                            (e.minSellingPrice / e.originalPrice).toFixed(2),
-                          ) *
-                            100}
+                        : (
+                            100 -
+                            (e.minSellingPrice / e.originalPrice) * 100
+                          ).toFixed(0)}
                       %
                     </span>
                     <span>
-                      {isCategory
+                      {e.ncSellingPrice
                         ? e.ncSellingPrice.toLocaleString()
                         : e.minSellingPrice.toLocaleString()}
                       원

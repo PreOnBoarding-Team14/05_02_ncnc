@@ -1,7 +1,7 @@
 import axios from 'axios';
 import NavBar from 'components/Navbar';
 import ItemList from 'components/ItemList';
-import EmptyBox from 'components/EmptyBox';
+import TopCount from 'components/TopCount';
 
 export default function ProductList({ data, current, name }) {
   const brandsNavbarAttr = { name, path: `/categories/${current}` };
@@ -9,7 +9,7 @@ export default function ProductList({ data, current, name }) {
   return (
     <div>
       <NavBar attr={brandsNavbarAttr} />
-      <EmptyBox />
+      <TopCount count={data.length} />
       <ItemList data={data} />
     </div>
   );

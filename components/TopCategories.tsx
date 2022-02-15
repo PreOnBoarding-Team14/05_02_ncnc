@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 const TopCategories = ({ list }) => {
   const router = useRouter();
   const { id } = router.query;
-  console.log(list, id);
+
   return (
     <div className={TopCategoriesStyles.div}>
       {list.map((e) => (
