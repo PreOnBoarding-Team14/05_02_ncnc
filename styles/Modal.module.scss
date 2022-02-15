@@ -1,0 +1,57 @@
+@import './common.scss';
+
+.menuContainer {
+  position: absolute;
+  width: 375px;
+  height: 700px;
+  max-width: 672px;
+  top: 0;
+  background-color: #fff;
+  z-index: 9999999999;
+  margin: auto;
+
+  nav {
+    background-color: rgb(255, 255, 255);
+    height: 58px;
+    top: 0px;
+    z-index: 50;
+  }
+
+  .line {
+    background-color: rgb(235, 236, 237);
+    height: 10px;
+  }
+
+  .bodyContainer {
+    display: flex;
+    margin-top: 59px;
+    flex-direction: column;
+    margin-top: 58px;
+    background-color: rgb(235, 236, 237);
+    .contactBtn {
+      display: flex;
+      padding: 15px 17px;
+      border-bottom: 1px solid #eee;
+      background-color: #fff;
+      justify-content: space-between;
+      cursor: pointer;
+
+      svg:not(:root) {
+        overflow: hidden;
+      }
+
+      svg {
+        width: 19px;
+        height: 20px;
+        fill: none;
+      }
+
+      span {
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        font-weight: 500;
+        align-self: center;
+      }
+    }
+  }
+}

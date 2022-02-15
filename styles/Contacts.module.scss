@@ -2,13 +2,13 @@
 
 .bodyContainer {
   display: flex;
-  height: 100vh;
-  overflow: scroll;
   margin-top: 59px;
   flex-direction: column;
+  width: 375px;
 
   .infoSection {
     padding: 17px;
+    background-color: #fff;
 
     .contactTimeTitle {
       font-size: 18px;
@@ -35,6 +35,7 @@
 
   .questionTabbox {
     padding: 17px 17px 0px;
+    background-color: #fff;
 
     .questionTitle {
       font-size: 18px;
