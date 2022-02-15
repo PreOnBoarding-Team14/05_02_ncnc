@@ -8,7 +8,7 @@ const Layout: FC = ({ children }) => {
       <Head>
         <title>니콘내콘</title>
       </Head>
-      <Nav />
+      {/* <Nav /> */}
       {children}
     </div>
   );
