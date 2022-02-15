@@ -16,20 +16,23 @@ export default function ContactsItem({ contact }: ContactItemProps) {
   }
 
   return (
-    <div>
-      <div className={ItemStyle.qasItem}>
-        <button className={ItemStyle.qasBtn} onClick={onClick}>
-          <span className={ItemStyle.spanQ}>Q.</span>
-          <span className={ItemStyle.spanQuestion}>{contact.question}</span>
-          <span className={ItemStyle.spanArrow}>
-            <Image src={Arrow} />
-          </span>
-        </button>
-        <div className={`${ItemStyle.answerBox} ${isOpen ? 'open' : ''}`}>
+    <div className={ItemStyle.qasItem}>
+      <button className={ItemStyle.qasBtn} onClick={onClick}>
+        <span className={ItemStyle.spanQ}>Q.</span>
+        <span className={ItemStyle.spanQuestion}>{contact.question}</span>
+        <span className={ItemStyle.spanArrow}>
+          <Image src={Arrow} />
+        </span>
+      </button>
+      <div
+        className={`${ItemStyle.answerBox} ${isOpen ? 'open' : ''}`}
+        style={isOpen ? { padding: '17px' } : {}}
+      >
+        {isOpen && (
           <div className={ItemStyle.answer}>
             <p>{contact.answer}</p>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
