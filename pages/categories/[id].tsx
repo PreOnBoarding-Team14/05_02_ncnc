@@ -4,15 +4,10 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import Grid from 'components/Grid';
 import ItemList from 'components/ItemList';
-import { useEffect } from 'react';
 
 export default function BrandList({ data }) {
   const router = useRouter();
   const { id } = router.query;
-
-  useEffect(() => {
-    localStorage.setItem('current', id);
-  }, []);
 
   return (
     <>

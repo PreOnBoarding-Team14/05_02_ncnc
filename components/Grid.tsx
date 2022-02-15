@@ -14,17 +14,7 @@ const Grid = ({ data }) => {
         {data.map((e) => (
           <div key={e.id}>
             {/* 요소 컨테이너 */}
-            <Link
-              href={
-                isCategory
-                  ? {
-                      pathname: `/brands/${e.id}`,
-                      query: { current: id },
-                    }
-                  : `/categories/${e.id}`
-              }
-              as={isCategory ? `/brands/${e.id}` : `/categories/${e.id}`}
-            >
+            <Link href={isCategory ? `/brands/${e.id}` : `/categories/${e.id}`}>
               <a>
                 <div>
                   <img src={e.imageUrl} />
