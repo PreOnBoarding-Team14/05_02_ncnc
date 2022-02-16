@@ -9,7 +9,7 @@ const ItemList = ({ data }: any) => {
 
   return (
     <div className={isItem ? itemListStyles.item : itemListStyles.div}>
-      {data.map((e) => (
+      {data.map((e: any) => (
         <Link href={`/items/${e.id}`} key={e.id}>
           <a>
             <div>
