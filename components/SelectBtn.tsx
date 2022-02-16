@@ -2,14 +2,14 @@ import Pencil from '../assets/pencil.svg';
 import selectBtnStyles from '../styles/SelectBtn.module.scss';
 import Image from 'next/image';
 
-interface ISelectBtn {
-  options:
-  isClicked:
-  handleClick :()=>void
-  originalPrice: number
-  option: string
-  handleOption: ()=>void
-}
+// interface ISelectBtn {
+//   options:
+//   isClicked:
+//   handleClick :()=>void
+//   originalPrice: number
+//   option: string
+//   handleOption: ()=>void
+// }
 
 const SelectBtn = ({
   options,
