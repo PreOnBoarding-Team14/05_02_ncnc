@@ -2,14 +2,19 @@ import Pencil from '../assets/pencil.svg';
 import selectBtnStyles from '../styles/SelectBtn.module.scss';
 import Image from 'next/image';
 
-// interface ISelectBtn {
-//   options:
-//   isClicked:
-//   handleClick :()=>void
-//   originalPrice: number
-//   option: string
-//   handleOption: ()=>void
-// }
+interface optiosProps {
+  expireAt: string;
+  sellingPrice: string | number;
+}
+
+interface ISelectBtn {
+  options: optiosProps;
+  isClicked: boolean;
+  handleClick: () => void;
+  originalPrice: number;
+  option: string;
+  handleOption: (option: string) => void;
+}
 
 const SelectBtn = ({
   options,
@@ -18,8 +23,8 @@ const SelectBtn = ({
   originalPrice,
   option,
   handleOption,
-}) => {
-  const getDate = (expire) => {
+}: ISelectBtn) => {
+  const getDate = (expire: string) => {
     const date = new Date(expire);
     const year = date.getFullYear();
     const month = date.getMonth() + 1;
@@ -75,7 +80,7 @@ const SelectBtn = ({
                 onClick={
                   option
                     ? () => {
-                        handleOption(null);
+                        handleOption('');
                         handleClick();
                       }
                     : null
@@ -97,7 +102,7 @@ const SelectBtn = ({
             option
               ? null
               : () => {
-                  handleOption(null);
+                  handleOption('');
                   handleClick();
                 }
           }

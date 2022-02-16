@@ -4,7 +4,7 @@ import Back from '../assets/back.svg';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-const NavBar = ({ attr }) => {
+const NavBar = ({ attr }: any) => {
   const router = useRouter();
   const { id } = router.query;
   const path = router.asPath;

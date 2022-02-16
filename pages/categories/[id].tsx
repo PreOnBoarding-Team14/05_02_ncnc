@@ -7,7 +7,7 @@ import ItemList from 'components/ItemList';
 import EmptyBox from 'components/EmptyBox';
 import TopCategories from 'components/TopCategories';
 
-export default function BrandList({ data, conCategories }) {
+export default function BrandList({ data, conCategories }: any) {
   const router = useRouter();
   const { id } = router.query;
   const categoriesNavAttr = { name: data.name, path: '/' };
@@ -28,7 +28,7 @@ export default function BrandList({ data, conCategories }) {
   );
 }
 
-export const getServerSideProps = async ({ query }) => {
+export const getServerSideProps = async ({ query }: any) => {
   const { id } = query;
   const res = await getConCategories();
   const conCategories = res.conCategory1s;

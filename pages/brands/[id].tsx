@@ -3,7 +3,7 @@ import NavBar from 'components/Navbar';
 import ItemList from 'components/ItemList';
 import TopCount from 'components/TopCount';
 
-export default function ProductList({ data, current, name }) {
+export default function ProductList({ data, current, name }: any) {
   const brandsNavbarAttr = { name, path: `/categories/${current}` };
 
   return (
@@ -15,7 +15,7 @@ export default function ProductList({ data, current, name }) {
   );
 }
 
-export const getServerSideProps = async ({ query }) => {
+export const getServerSideProps = async ({ query }: any) => {
   const { id } = query;
 
   const response = await axios.get(
