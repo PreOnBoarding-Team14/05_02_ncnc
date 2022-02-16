@@ -7,7 +7,7 @@ import itemStyles from '../../styles/Item.module.scss';
 import SelectBtn from 'components/SelectBtn';
 import { useState } from 'react';
 
-export default function BrandList({ data }) {
+export default function BrandList({ data }: any) {
   const itemNavbarAttr = { name: '', path: '/' };
   const options = data[0].options;
   const originalPrice = data[0].originalPrice;
@@ -40,7 +40,7 @@ export default function BrandList({ data }) {
   );
 }
 
-export const getServerSideProps = async ({ query }) => {
+export const getServerSideProps = async ({ query }: any) => {
   const { id } = query;
   const res = await axios.get(`https://api2.ncnc.app/con-items/${id}`);
   const { conItem } = res.data;

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import gridStyles from '../styles/Grid.module.scss';
 
-const Grid = ({ data }) => {
+const Grid = ({ data }: any) => {
   const router = useRouter();
   const { id } = router.query;
   const isCategory = router.pathname.includes('/categories');
