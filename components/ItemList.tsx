@@ -6,7 +6,6 @@ import itemListStyles from '../styles/ItemList.module.scss';
 const ItemList = ({ data }) => {
   const router = useRouter();
   const isItem = router.pathname.includes('item');
-  console.log(data);
 
   return (
     <div className={isItem ? itemListStyles.item : itemListStyles.div}>
