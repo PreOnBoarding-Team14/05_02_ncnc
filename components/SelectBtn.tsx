@@ -35,7 +35,7 @@ const SelectBtn = ({
   return (
     <div className={selectBtnStyles.container}>
       {isClicked ? (
-        <div>
+        <div className={selectBtnStyles.wrapper}>
           <div className={selectBtnStyles.select}>옵션 선택하기</div>
           {options.map((e: any, i: number) => {
             return (
