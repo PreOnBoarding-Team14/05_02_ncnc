@@ -5,14 +5,21 @@
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: 20px;
   height: 100%;
+}
+
+.black {
+  position: relative;
+  width: $mobile-width;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
 }
 
 .title {
   display: flex;
   font-size: 14px;
-  margin: 5px;
+  margin: 20px;
 }
 
 .contents {
@@ -20,7 +27,7 @@
   flex-direction: column;
   color: #808080;
   font-size: 12px;
-  margin: 5px;
+  margin: 20px;
 
   div {
     margin: 5px;

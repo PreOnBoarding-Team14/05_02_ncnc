@@ -1,0 +1,107 @@
+@import './common.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.select {
+  display: flex;
+  background-color: #f1f3f4;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.mapContainer {
+  display: flex;
+  height: 60px;
+  padding: 0 20px;
+  background-color: white;
+  align-items: center;
+  cursor: pointer;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: #808080;
+  justify-content: center;
+  width: 50px;
+
+  div {
+    margin: 3px;
+  }
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  justify-content: center;
+  margin-left: 15px;
+  width: 240px;
+  div {
+    margin: 3px;
+  }
+}
+
+.rate {
+  color: #ff5757;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  font-size: 16px;
+}
+
+.option {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+
+  div:first-child {
+    display: flex;
+    width: 340px;
+    height: 30px;
+    border-radius: 5px;
+    background: #f1f3f4;
+    padding: 0 20px;
+    align-items: center;
+  }
+
+  div:nth-child(2) {
+    width: 20px;
+  }
+}
+
+.btnContainer {
+  margin-top: 80px;
+  display: flex;
+  button {
+    width: $mobile-width;
+    height: 80px;
+    border: none;
+    position: fixed;
+    bottom: 0;
+    background-color: #ff5757;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.selectedBtnContainer {
+  display: flex;
+  margin-top: 80px;
+  button {
+    width: $mobile-width;
+    height: 80px;
+    border: none;
+    position: fixed;
+    bottom: 0;
+    background-color: #cccccc;
+    color: white;
+    cursor: pointer;
+  }
+}
