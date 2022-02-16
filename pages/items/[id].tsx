@@ -7,7 +7,7 @@ import itemStyles from '../../styles/Item.module.scss';
 import SelectBtn from 'components/SelectBtn';
 import { useState } from 'react';
 
-export default function BrandList({ data }: any) {
+function BrandList({ data }: any) {
   const itemNavbarAttr = { name: '', path: '/' };
   const options = data[0].options;
   const originalPrice = data[0].originalPrice;
@@ -50,3 +50,5 @@ export const getServerSideProps = async ({ query }: any) => {
     },
   };
 };
+
+export default BrandList;

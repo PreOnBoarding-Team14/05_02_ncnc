@@ -9,7 +9,7 @@ import EmptyBox from 'components/EmptyBox';
 import Modal from 'components/Modal';
 import IndexStyles from '../styles/Index.module.scss';
 
-export default function Home({ conCategories, conItems }: any) {
+function Home({ conCategories, conItems }: any) {
   const [isModal, setIsModal] = useState(false);
 
   function onClick() {
@@ -48,3 +48,5 @@ export const getServerSideProps = async () => {
     },
   };
 };
+
+export default Home;
