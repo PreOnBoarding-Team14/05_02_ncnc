@@ -84,10 +84,14 @@ const SelectBtn = ({
         }
       >
         <button
-          onClick={() => {
-            handleOption(null);
-            handleClick();
-          }}
+          onClick={
+            option
+              ? null
+              : () => {
+                  handleOption(null);
+                  handleClick();
+                }
+          }
         >
           {option ? '구매하기' : '옵션 선택하기'}
         </button>
