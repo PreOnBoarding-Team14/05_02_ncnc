@@ -8,7 +8,8 @@ import SelectBtn from 'components/SelectBtn';
 import { useState } from 'react';
 
 function BrandList({ data }: any) {
-  const itemNavbarAttr = { name: '', path: '/' };
+  const brand = data[0].conCategory2Id;
+  const itemNavbarAttr = { name: '', path: `/brands/${brand}` };
   const options = data[0].options;
   const originalPrice = data[0].originalPrice;
   const [isClicked, setIsClicked] = useState(false);
