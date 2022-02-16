@@ -11,7 +11,7 @@ const Grid = ({ data }: any) => {
     <section>
       <div className={gridStyles.div}>
         {/* 외부컨테이너 */}
-        {data.map((e) => (
+        {data.map((e: any) => (
           <div key={e.id}>
             {/* 요소 컨테이너 */}
             <Link href={isCategory ? `/brands/${e.id}` : `/categories/${e.id}`}>
