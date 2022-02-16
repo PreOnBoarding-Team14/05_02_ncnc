@@ -35,3 +35,9 @@ module.exports = {
     domains: ['d2lfdrnysfmya6.cloudfront.net'],
   },
 };
+
+module.exports = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+};
