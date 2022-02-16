@@ -12,13 +12,13 @@ export default function BrandList({ data }) {
   const options = data[0].options;
   const originalPrice = data[0].originalPrice;
   const [isClicked, setIsClicked] = useState(false);
-  const [option, setOption] = useState(null);
+  const [option, setOption] = useState('');
 
   const handleClick = () => {
     setIsClicked(!isClicked);
   };
 
-  const handleOption = (option) => {
+  const handleOption = (option: string) => {
     setOption(option);
   };
 
