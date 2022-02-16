@@ -2,8 +2,6 @@
 
 [유대형, 임보슬]
 
-### 배포 주소
-
 ## 💻 설치 방법
 
     npm install
@@ -11,66 +9,62 @@
 
 ## 📂 파일 구조
 
-┣ apis
-┃ ┣ contact.ts
-┃ ┗ main.ts
-┣ assets
-┃ ┣ Arrow.svg
-┃ ┣ back.svg
-┃ ┣ enter.svg
-┃ ┗ hamburger.svg
-┣ components
-┃ ┣ BrandItem.tsx
-┃ ┣ ContactsItem.tsx
-┃ ┣ EmptyBox.tsx
-┃ ┣ Grid.tsx
-┃ ┣ ItemList.tsx
-┃ ┣ Layout.tsx
-┃ ┣ MainText.tsx
-┃ ┣ Modal.tsx
-┃ ┣ Navbar.tsx
-┃ ┣ ProductItem.tsx
-┃ ┣ TopCategories.tsx
-┃ ┣ TopCount.tsx
-┃ ┗ Warning.tsx
-┣ config
-┃ ┗ config.ts
-┣ interfaces
-┃ ┗ contact.ts
-┣ pages
-┃ ┣ brands
-┃ ┃ ┗ [id].tsx
-┃ ┣ categories
-┃ ┃ ┗ [id].tsx
-┃ ┣ items
-┃ ┃ ┗ [id].tsx
-┃ ┣ contacts.tsx
-┃ ┣ index.tsx
-┃ ┗ \_app.tsx
-┣ public
-┃ ┣ favicon.ico
-┃ ┗ vercel.svg
-┗ styles
-┃ ┣ common.scss
-┃ ┣ ContactItem.module.scss
-┃ ┣ Contacts.module.scss
-┃ ┣ EmptyBox.module.scss
-┃ ┣ globals.css
-┃ ┣ Grid.module.scss
-┃ ┣ Home.module.scss
-┃ ┣ Index.module.scss
-┃ ┣ Item.module.scss
-┃ ┣ ItemList.module.scss
-┃ ┣ MainText.module.scss
-┃ ┣ Modal.module.scss
-┃ ┣ Nav.module.scss
-┃ ┣ TopCategories.module.scss
-┃ ┣ TopCount.module.scss
-┃ ┗ Warning.module.scss
-
-## 📋개발 진행 상황 공유
-
-<img width="952" alt="스크린샷 2022-02-09 오전 2 42 19" src="https://user-images.githubusercontent.com/91244500/153044840-4b2231bb-2323-4086-aad8-377874414505.png">
+┣ apis  
+┃ ┣ contact.ts  
+┃ ┗ main.ts  
+┣ assets  
+┃ ┣ Arrow.svg  
+┃ ┣ back.svg  
+┃ ┣ enter.svg  
+┃ ┗ hamburger.svg  
+┣ components  
+┃ ┣ BrandItem.tsx  
+┃ ┣ ContactsItem.tsx  
+┃ ┣ EmptyBox.tsx  
+┃ ┣ Grid.tsx  
+┃ ┣ ItemList.tsx  
+┃ ┣ Layout.tsx  
+┃ ┣ MainText.tsx  
+┃ ┣ Modal.tsx  
+┃ ┣ Navbar.tsx  
+┃ ┣ ProductItem.tsx  
+┃ ┣ TopCategories.tsx  
+┃ ┣ TopCount.tsx  
+┃ ┗ Warning.tsx  
+┣ config  
+┃ ┗ config.ts  
+┣ interfaces  
+┃ ┗ contact.ts  
+┣ pages  
+┃ ┣ brands  
+┃ ┃ ┗ [id].tsx  
+┃ ┣ categories  
+┃ ┃ ┗ [id].tsx  
+┃ ┣ items  
+┃ ┃ ┗ [id].tsx  
+┃ ┣ contacts.tsx  
+┃ ┣ index.tsx  
+┃ ┗ \_app.tsx  
+┣ public  
+┃ ┣ favicon.ico  
+┃ ┗ vercel.svg  
+┗ styles  
+┃ ┣ common.scss  
+┃ ┣ ContactItem.module.scss  
+┃ ┣ Contacts.module.scss  
+┃ ┣ EmptyBox.module.scss  
+┃ ┣ globals.css  
+┃ ┣ Grid.module.scss  
+┃ ┣ Home.module.scss  
+┃ ┣ Index.module.scss  
+┃ ┣ Item.module.scss  
+┃ ┣ ItemList.module.scss  
+┃ ┣ MainText.module.scss  
+┃ ┣ Modal.module.scss  
+┃ ┣ Nav.module.scss  
+┃ ┣ TopCategories.module.scss  
+┃ ┣ TopCount.module.scss  
+┃ ┗ Warning.module.scss  
 
 ### 프로젝트 과정 소개
 
