@@ -1,6 +1,6 @@
 import WarningStyles from '../styles/Warning.module.scss';
 
-const Warning = ({ isClicked }) => {
+const Warning = ({ isClicked }: any) => {
   return (
     <>
       <div className={WarningStyles.container}>

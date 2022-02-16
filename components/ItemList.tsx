@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import itemListStyles from '../styles/ItemList.module.scss';
 
-const ItemList = ({ data }) => {
+const ItemList = ({ data }: any) => {
   const router = useRouter();
   const isItem = router.pathname.includes('item');
 
