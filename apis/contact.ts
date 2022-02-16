@@ -8,6 +8,6 @@ export function getContactsType() {
   return axios.get(`/qa-types`).then((res) => res.data);
 }
 
-export function getContactsQas(typeId: string) {
+export function getContactsQas(typeId: number) {
   return axios.get(`/qas?qaTypeId=${typeId}`).then((res) => res.data);
 }

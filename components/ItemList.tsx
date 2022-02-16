@@ -1,20 +1,31 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import Image from 'next/image';
 import itemListStyles from '../styles/ItemList.module.scss';
 
-const ItemList = ({ data }) => {
+const ItemList = ({ data }: any) => {
   const router = useRouter();
-  console.log(data);
+  const isItem = router.pathname.includes('item');
 
   return (
-    <div className={itemListStyles.div}>
+    <div className={isItem ? itemListStyles.item : itemListStyles.div}>
       {data.map((e) => (
         <Link href={`/items/${e.id}`} key={e.id}>
           <a>
             <div>
               <div>
-                <img src={e.imageUrl} />
+                <Image
+                  className={itemListStyles.img}
+                  src={e.imageUrl}
+                  width="74px"
+                  height="74px"
+                />
                 <div>
+                  {isItem && e.conCategory2 ? (
+                    <div className={itemListStyles.brand}>
+                      {e.conCategory2.name}
+                    </div>
+                  ) : null}
                   <div>{e.name}</div>
                   <div>
                     <span>

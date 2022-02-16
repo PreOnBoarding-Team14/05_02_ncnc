@@ -1,0 +1,71 @@
+@import './common.scss';
+
+.bodyContainer {
+  display: flex;
+  margin-top: 59px;
+  flex-direction: column;
+  width: 375px;
+
+  .infoSection {
+    padding: 17px;
+    background-color: #fff;
+
+    .contactTimeTitle {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .contactDay {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .contactTimeInfo {
+      font-size: 16px;
+      color: rgb(128, 128, 128);
+    }
+  }
+
+  .line {
+    background-color: rgb(235, 236, 237);
+    height: 10px;
+  }
+
+  .questionTabbox {
+    padding: 17px 17px 0px;
+    background-color: #fff;
+
+    .questionTitle {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .tabbox {
+      display: flex;
+
+      & > button {
+        box-shadow: none !important;
+        cursor: pointer;
+        border: none;
+        background-color: #fff;
+        color: #333;
+        padding: 0;
+      }
+
+      .tabBtn {
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        flex-grow: 1;
+
+        &.selected {
+          color: #f75656 !important;
+          border-bottom: 2px solid #f75656 !important;
+        }
+      }
+    }
+  }
+}

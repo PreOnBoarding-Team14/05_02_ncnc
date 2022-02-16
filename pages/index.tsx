@@ -1,20 +1,36 @@
-import { getConCategories } from 'apis/main';
+import { useState } from 'react';
 import axios from 'axios';
+import { getConCategories } from 'apis/main';
 import NavBar from 'components/Navbar';
 import Grid from 'components/Grid';
 import MainText from 'components/MainText';
 import ItemList from 'components/ItemList';
-import IndexStyles from '../styles/Index.module.scss';
 import EmptyBox from 'components/EmptyBox';
+import Modal from 'components/Modal';
+import IndexStyles from '../styles/Index.module.scss';
 
-export default function Home({ conCategories, conItems }) {
+export default function Home({ conCategories, conItems }: any) {
+  const [isModal, setIsModal] = useState(false);
+
+  function onClick() {
+    setIsModal(!isModal);
+  }
+
+  const modalAttr = { name: '', path: '', isModal, onClick };
+
   return (
     <div className={IndexStyles.container}>
-      <NavBar />
+      <NavBar attr={modalAttr} />
       <EmptyBox />
       <Grid data={conCategories} />
-      <MainText />
-      <ItemList data={conItems} />
+      {!isModal ? (
+        <>
+          <MainText />
+          <ItemList data={conItems} />
+        </>
+      ) : (
+        <Modal onClick={onClick} isModal />
+      )}
     </div>
   );
 }
