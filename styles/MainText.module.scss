@@ -1,0 +1,19 @@
+@import './common.scss';
+
+.div {
+  display: flex;
+  flex-direction: column;
+  width: $mobile-width;
+  background-color: $gray;
+  padding: 17px;
+
+  div:first-child {
+    color: #ff5757;
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  div:nth-child(2) {
+    font-size: 16px;
+  }
+}

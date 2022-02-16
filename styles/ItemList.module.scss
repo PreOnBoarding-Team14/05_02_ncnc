@@ -1,0 +1,114 @@
+@import './common.scss';
+
+.div {
+  display: flex;
+  flex-direction: column;
+  width: $mobile-width;
+  background-color: $gray;
+
+  div {
+    height: 100px;
+    align-items: center;
+    margin-bottom: 1px;
+    cursor: pointer;
+
+    div {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      padding: 0 20px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+        height: 60px;
+        margin-left: 10px;
+
+        div {
+          display: flex;
+          flex-direction: row;
+
+          span:first-child {
+            color: $pink;
+            font-size: 16px;
+            margin-right: 3px;
+          }
+
+          span:nth-child(2) {
+            font-size: 16px;
+            margin: 0 6px;
+          }
+
+          span:nth-child(3) {
+            color: #808080;
+            font-size: 14px;
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+}
+
+.img {
+  border-radius: 10px;
+  margin: 20px 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: $mobile-width;
+  background-color: $gray;
+
+  div {
+    height: 100px;
+    align-items: center;
+    margin-bottom: 1px;
+
+    div {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      padding: 0 20px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+        height: 60px;
+        margin-left: 10px;
+
+        div {
+          display: flex;
+          flex-direction: row;
+
+          span:first-child {
+            color: $pink;
+            font-size: 16px;
+            margin-right: 3px;
+          }
+
+          span:nth-child(2) {
+            font-size: 16px;
+            margin: 0 6px;
+          }
+
+          span:nth-child(3) {
+            color: #808080;
+            font-size: 14px;
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+}
+
+.brand {
+  color: #808080;
+  font-size: 14px;
+}
