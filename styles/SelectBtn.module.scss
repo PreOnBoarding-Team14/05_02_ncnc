@@ -12,6 +12,18 @@
   font-size: 14px;
 }
 
+.wrapper {
+  max-height: 800px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
 .mapContainer {
   display: flex;
   height: 60px;
