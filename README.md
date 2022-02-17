@@ -2,6 +2,10 @@
 
 [유대형, 임보슬]
 
+## 배포 주소
+
+https://ncnc-14-bsa18tus9-ydh94.vercel.app/
+
 ## 💻 설치 방법
 
     npm install
@@ -64,7 +68,7 @@
 ┃ ┣ Nav.module.scss  
 ┃ ┣ TopCategories.module.scss  
 ┃ ┣ TopCount.module.scss  
-┃ ┗ Warning.module.scss  
+┃ ┗ Warning.module.scss
 
 ### 프로젝트 과정 소개
 
